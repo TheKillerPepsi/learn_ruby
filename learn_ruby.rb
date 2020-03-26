@@ -176,19 +176,6 @@ if string_to_check.include? "substring"
 Mit der Methode gsub kann man Strings bearbeitet. Z.B. aus allen "s" ein "th" machen
 
 
-Ducky Duckified:
-print "Give me input: "
-user_input = gets.chomp
-user_input2= user_input.downcase
-user_input.downcase!
-if user_input == ""
-  print "Bitte etwas Eingeben!"
-elsif user_input.include? "s"
-  user_input.gsub!(/s/, "th")
-  puts "#{user_input}"
-elsif
-  print "Nothing to do here"
-end
 
 
 
@@ -294,4 +281,34 @@ j = 3
 until j == 0 do
   print j
   j -= 1
+end
+
+
+Mit der Methde split kann man einen String in einen Array machen.
+Das in den Klammer bedeutet quasi, wo man die Splittet
+words = text.split(" ")
+
+
+
+
+
+
+What could you do to make sure your redactor redacts a word regardless of whether it’s upper case or lower case?
+    How could you make your program take multiple, separate words to REDACT?
+    How might you make a new redacted string and save it as a variable, rather than just printing it to the console?
+
+
+
+    puts "Gimme Text"
+text = gets.chomp
+puts "Gimme Word"
+redact = gets.chomp
+redact.downcase!
+words = text.split(" ")
+words.each do |word|
+  if word == redact
+    print "REDACT"
+  else
+    print word + " "
+  end
 end
