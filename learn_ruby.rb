@@ -257,6 +257,8 @@ array.each do |x|
   print "#{x}"
 end
 
+my_2d_array = [[0, 0], [0, 0],]
+
 das x ist in dem Kontext eine Variable, die für den Arraywert steht
 
 
@@ -312,3 +314,28 @@ words.each do |word|
     print word + " "
   end
 end
+
+
+Hashes
+
+pets = Hash.new
+pets = {
+  "Kuba" => "doggo",
+  "Rocky" => "cat",
+  "Lucy" => "fish"
+}
+
+puts pets["Kuba"]
+
+
+lunch_order = {
+  "Ryan" => "wonton soup",
+  "Eric" => "hamburger",
+  "Jimmy" => "sandwich",
+  "Sasha" => "salad",
+  "Cole" => "taco"
+}
+lunch_order.each{
+  |x, y|
+  puts y
+}
